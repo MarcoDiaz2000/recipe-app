@@ -1,0 +1,3 @@
+# comment
+module ApplicationHelper
+end
