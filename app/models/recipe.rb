@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # comment
 class Recipe < ApplicationRecord
   belongs_to :user

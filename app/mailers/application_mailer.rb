@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # comment
 class ApplicationMailer < ActionMailer::Base
   default from: 'from@example.com'
