@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     post 'login' => 'devise/sessions#create', as: :user_session
     get 'logout' => 'devise/sessions#destroy', as: :destroy_user_session
   end
+
+  get '/public_recipes', to: 'recipes#public_recipes', as: 'public_recipes'
   get 'home/index'
   root 'home#index'
   resources :users, only: [:index, :show, :destroy]
