@@ -32,9 +32,9 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
 
     if @recipe.destroy
-      flash[:alert] = 'Recipe deleted successfully'
+      flash[:notice] = 'Recipe deleted successfully'
     else
-      flash[:alert] = 'Recipe not deleted, try again'
+      flash[:alert] = 'Error!, No recipe was deleted'
     end
     redirect_to recipes_path
   end
@@ -44,7 +44,7 @@ class RecipesController < ApplicationController
     @recipe.update(public: !@recipe.public)
     redirect_to @recipe
   end
-  
+
   private
 
   def recipe_params
