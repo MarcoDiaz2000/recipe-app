@@ -1,0 +1,49 @@
+/* Estilo para el título principal */
+h1 {
+  color: brown;
+  text-align: center;
+}
+
+/* Estilo para la lista de recuadros */
+.recipes {
+  text-align: center;
+  align-items: center;
+}
+
+/* Estilo para cada recuadro de receta */
+.recipe-box {
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  margin: 16px auto;
+  padding: 16px;
+  width: 500px;
+  display: flex;
+}
+
+/* Estilo para la columna izquierda del recuadro */
+.left-column {
+  flex: 1;
+  padding: 5px;
+}
+
+/* Estilo para la columna derecha del recuadro */
+.right-column {
+  flex: 1;
+  padding: 5px;
+}
+
+/* Estilo para el título de la receta */
+.left-column h2 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo para el autor de la receta */
+.left-column p {
+  margin: 5px 0 0 0;
+}
+
+/* Estilo para los elementos de comida y precio */
+.right-column p {
+  margin: 5px 0;
+}
