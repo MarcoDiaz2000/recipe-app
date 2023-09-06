@@ -1,0 +1,16 @@
+<h1>Public Recipes</h1>
+
+<div class="recipes">
+  <% @recipes.each do |recipe| %>
+    <div class="recipe-box">
+      <div class="left-column">
+        <h2><%= recipe.name %></h2>
+        <p>by <%= recipe.user.name %></p>
+      </div>
+      <div class="right-column">
+        <p>Total food items: <%= recipe.foods.count %></p>
+        <p>Total price: <%= recipe.foods.sum(&:price) %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
