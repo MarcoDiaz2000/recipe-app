@@ -1,6 +1,6 @@
 <div class="recipe-form-container">
   <h2>New Recipe</h2>
-  <%= form_for @recipe, html: { class: 'recipe-form' } do |f| %>
+  <%= form_with(model: @recipe, html: { class: 'recipe-form' }) do |f| %>
     <div class="form-group">
       <%= f.label :name, "Name" %>
       <%= f.text_field :name, placeholder: "Recipe name" %>
