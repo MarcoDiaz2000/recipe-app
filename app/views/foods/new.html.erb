@@ -1,23 +1,31 @@
-<%= form_with model: @food, local: true do |form| %>
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <%= form_with model: @food, local: true, html: { class: 'form-group' } do |form| %>
 
-  <div class="field">
-    <%= form.label :measurement_unit %>
-    <%= form.text_field :measurement_unit %>
-  </div>
+        <div class="mb-3">
+          <%= form.label :name, class: 'form-label' %>
+          <%= form.text_field :name, class: 'form-control' %>
+        </div>
 
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.number_field :price, step: 0.01 %>
-  </div>
+        <div class="mb-3">
+          <%= form.label :measurement_unit, class: 'form-label' %>
+          <%= form.text_field :measurement_unit, class: 'form-control' %>
+        </div>
 
-  <div class="field">
-    <%= form.label :quantity %>
-    <%= form.number_field :quantity, step: 0.01 %>
-  </div>
+        <div class="mb-3">
+          <%= form.label :price, class: 'form-label' %>
+          <%= form.number_field :price, step: 0.01, class: 'form-control' %>
+        </div>
 
-  <%= form.submit 'Create Food' %>
-<% end %>
+        <div class="mb-3">
+          <%= form.label :quantity, class: 'form-label' %>
+          <%= form.number_field :quantity, step: 0.01, class: 'form-control' %>
+        </div>
+
+        <%= form.submit 'Create Food', class: 'btn btn-primary' %>
+
+      <% end %>
+    </div>
+  </div>
+</div>

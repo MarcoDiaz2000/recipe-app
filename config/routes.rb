@@ -8,8 +8,10 @@ Rails.application.routes.draw do
     get 'logout' => 'devise/sessions#destroy', as: :destroy_user_session
   end
 
-  get 'users/index'
-  root 'foods#index'
+  get '/public_recipes', to: 'recipes#public_recipes', as: 'public_recipes'
+  get 'home/index'
+  root 'home#index'
+
   resources :users, only: [:index, :show, :destroy]
   resources :foods, only: [:new, :create, :index, :destroy]
   resources :recipes, only: [:index, :show, :new, :create, :destroy] do
