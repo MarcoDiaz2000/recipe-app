@@ -1,0 +1,15 @@
+<div class="recipe-list">
+  <%= link_to 'New recipe', new_recipe_path %>
+</div>
+
+<% @recipes.each do |recipe| %>
+  <div class="recipe-item">
+    <%= link_to recipe_path(recipe) do %>
+      <div class="recipe-details">
+        <p class="recipe-name"><%= recipe.name %></p>
+        <p class="recipe-description"><%= recipe.description %></p>
+      </div>
+    <% end %>
+    <%= button_to 'REMOVE', recipe_path(recipe), method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure?' } %>
+  </div>
+<% end %>
