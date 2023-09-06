@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">RecipeApp</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <%= link_to 'Home', 'home/index', class: 'nav-link' %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Public Recipes', public_recipes_path, class: 'nav-link' %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Personal Recipes', "#", class: 'nav-link' %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'My Shopping List', "#", class: 'nav-link' %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'My Foods', foods_path, class: 'nav-link' %>
+      </li>
+      <% if user_signed_in? %>
+        <li class="nav-item">
+          <%= link_to 'Logout', destroy_user_session_path, class: 'nav-link' %>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to 'Login', new_user_session_path, class: 'nav-link' %> 
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Sign up', new_user_registration_path, class: 'nav-link' %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</nav>
