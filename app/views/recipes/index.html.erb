@@ -1,15 +1,19 @@
-<div class="recipe-list">
-  <%= link_to 'New recipe', new_recipe_path %>
-</div>
+<h1>Your Recipes</h1>
 
-<% @recipes.each do |recipe| %>
-  <div class="recipe-item">
-    <%= link_to recipe_path(recipe) do %>
-      <div class="recipe-details">
-        <p class="recipe-name"><%= recipe.name %></p>
-        <p class="recipe-description"><%= recipe.description %></p>
+<div class="recipes">
+  <%= link_to 'New recipe', new_recipe_path, class: 'btn btn-primary mb-4' %>
+  
+  <% @recipes.each do |recipe| %>
+    <div class="recipe-box d-flex justify-content-between align-items-center">
+      <div class="left-column">
+        <h2>
+          <%= link_to recipe.name, recipe_path(recipe) %>
+        </h2>
+        <%= button_to 'REMOVE', recipe_path(recipe), method: :delete, class: 'btn btn-danger btn-sm mt-3', data: { confirm: 'Are you sure?' } %>
       </div>
-    <% end %>
-    <%= button_to 'REMOVE', recipe_path(recipe), method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure?' } %>
-  </div>
-<% end %>
+      <div class="right-column">
+        <p><%= recipe.description %></p>
+      </div>
+    </div>
+  <% end %>
+</div>

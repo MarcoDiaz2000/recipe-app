@@ -1,30 +1,29 @@
-<div class="shopping-list-container">
+<div class="text-center mt-4 mb-4">
   <h1>General Shopping List</h1>
+</div>
 
-  <div class="shopping-list-summary">
-    <p><span>Total Food Items:</span><span><%= @total_food_items %></span></p>
-    <p><span>Total Price:</span><span><%= @total_price %></span></p>
-  </div>
+<div class="shopping-list-summary text-center mt-4 mb-4 d-flex justify-content-center">
+  <div class="p-2"><span>Total Food Items:</span><span><%= @total_food_items %></span></div>
+  <div class="p-2"><span>Total Price:</span><span><%= @total_price %></span></div>
+</div>
 
-  <div class="shopping-list-table">
-    <table class="table">
-
+<div class="text-center mt-4 mb-4">
+  <table class="table table-bordered table-striped" style="width: 500px; margin: auto;">
+    <thead class="thead-dark">
       <tr>
-        <th class="table-header">Food Item</th>
-        <th class="table-header">Quantity</th>
-        <th class="table-header">Total Price</th>
+        <th>Food Item</th>
+        <th>Quantity</th>
+        <th>Total Price</th>
       </tr>
-
-      <tbody>
-        <% @general_shopping_list.each do |item| %>
-          <tr class="table-row">
-            <td class="table-cell"><%= item[:name] %></td>
-            <td class="table-cell"><%= item[:quantity] %></td>
-            <td class="table-cell"><%= item[:price] * item[:quantity] %></td>
-          </tr>
-        <% end %>
-      </tbody>
-
-    </table>
-  </div>
+    </thead>
+    <tbody>
+      <% @general_shopping_list.each do |item| %>
+        <tr>
+          <td><%= item[:name] %></td>
+          <td><%= item[:quantity] %></td>
+          <td><%= item[:price] * item[:quantity] %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>

@@ -1,24 +1,34 @@
-<div class="recipe-form-container">
-  <h2>New Recipe</h2>
-  <%= form_with(model: @recipe, html: { class: 'recipe-form' }) do |f| %>
-    <div class="form-group">
-      <%= f.label :name, "Name" %>
-      <%= f.text_field :name, placeholder: "Recipe name" %>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h2>New Recipe</h2>
+      <%= form_with(model: @recipe, local: true, html: { class: 'form-group' }) do |f| %>
+        
+        <div class="mb-3">
+          <%= f.label :name, "Name", class: 'form-label' %>
+          <%= f.text_field :name, placeholder: "Recipe name", class: 'form-control' %>
+        </div>
+        
+        <div class="mb-3">
+          <%= f.label :preparation_time, "Preparation time", class: 'form-label' %>
+          <%= f.text_field :preparation_time, placeholder: "10", class: 'form-control' %>
+        </div>
+        
+        <div class="mb-3">
+          <%= f.label :cooking_time, "Cooking time", class: 'form-label' %>
+          <%= f.text_field :cooking_time, placeholder: "20", class: 'form-control' %>
+        </div>
+        
+        <div class="mb-3">
+          <%= f.label :description, "Description", class: 'form-label' %>
+          <%= f.text_field :description, placeholder: "Recipe description", class: 'form-control' %>
+        </div>
+        
+        <div class="mb-3">
+          <%= f.submit "Submit", class: 'btn btn-primary' %>
+        </div>
+        
+      <% end %>
     </div>
-    <div class="form-group">
-      <%= f.label :preparation_time, "Preparation time" %>
-      <%= f.text_field :preparation_time, placeholder: "10" %>
-    </div>
-    <div class="form-group">
-      <%= f.label :cooking_time, "Cooking time" %>
-      <%= f.text_field :cooking_time, placeholder: "20" %>
-    </div>
-    <div class="form-group">
-      <%= f.label :description, "Description" %>
-      <%= f.text_field :description, placeholder: "Recipe description" %>
-    </div>
-    <div class="form-actions">
-      <%= f.submit "Submit", class: 'btn btn-primary' %>
-    </div>
-  <% end %>
+  </div>
 </div>
