@@ -1,26 +1,120 @@
-# README
+<a name="readme-top"></a>
 
-Recipe App
+# 📗 Table of Contents
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- [📖 About the Project](#about-project) 
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+- [💻 Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+- [👥 Authors](#authors)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgments](#acknowledgements)
+- [📝 License](#license)
 
-Things you may want to cover:
+<!-- PROJECT DESCRIPTION -->
 
-* Ruby version
+# 📖 Recipe App <a name="about-project"></a>
 
-* System dependencies 
 
-* Configuration
+The Recipe app keeps track of all your recipes, ingredients, and inventory. It enables features like creating and saving recipes, adding ingredients, generating a shopping list, and much more. we also implemented key concepts like authentication and authorization using Ruby on Rails.
 
-* Database creation
+## 🛠 Built With <a name="built-with"></a>
 
-* Database initialization
+### Tech Stack <a name="tech-stack"></a>
 
-* How to run the test suite
+- Ruby on Rails
+- ActiveRecord
+- Devise for authentication
 
-* Services (job queues, cache servers, search engines, etc.)
+### Key Features <a name="key-features"></a>
 
-* Deployment instructions
+- User Authentication
+- CRUD operations for recipes and ingredients
+- Public and private recipe toggles
+- Shopping list generation
+- Unit and integration tests with Rspec and Capybara
 
-* ...
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+### Prerequisites
+
+- [Ruby on Rails](https://rubyonrails.org/)
+- [Git](https://git-scm.com/downloads)
+
+### Install
+
+<pre>
+git clone https://github.com/MarcoDiaz2000/recipe-app.git
+cd recipe-app
+bundle install
+</pre>
+
+### Usage
+
+<pre>
+rails s
+</pre>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Marco Díaz**
+
+- GitHub: [@MarcoDiaz](https://github.com/MarcoDiaz2000)
+- Twitter: [@MarcoDiaz](https://twitter.com/MarcoDi70620847)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/marco-diaz-0876a7268/)
+
+👤 **Wilhelm Kamulunga**
+
+- GitHub: [@githubhandle](https://github.com/WilhelmK109)
+- Twitter: [@twitterhandle](https://twitter.com/ActiveK7)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/wilhelm-kamulunga-613675114/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Check the [issues page](../../issues/).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you found this project helpful, consider giving a ⭐️!
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+I would like to thank Microverse for giving me this opportunity.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>

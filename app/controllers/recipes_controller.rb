@@ -1,12 +1,12 @@
 class RecipesController < ApplicationController
   before_action :authenticate_user!
 
-  def index
-    @recipes = Recipe.all
-  end
-
   def public_recipes
     @recipes = Recipe.includes(:user, :foods).where(public: true).order(created_at: :desc)
+  end
+
+  def index
+    @recipes = Recipe.all
   end
 
   def show
