@@ -23,33 +23,33 @@ class RecipeFoodsController < ApplicationController
   def edit
     @recipe = Recipe.find(params[:recipe_id])
     @recipe_food = RecipeFood.find(params[:id])
-end
+  end
 
-def update
+  def update
     @recipe = Recipe.find(params[:recipe_id])
     @recipe_food = RecipeFood.find(params[:id])
 
     if @recipe_food.update(recipe_food_params)
-        flash[:notice] = 'Ingredient updated successfully'
-        redirect_to recipe_path(@recipe)
+      flash[:notice] = 'Ingredient updated successfully'
+      redirect_to recipe_path(@recipe)
     else
-        flash[:alert] = 'Ingredient failed to update'
-        render :edit
+      flash[:alert] = 'Ingredient failed to update'
+      render :edit
     end
-end
-
-def destroy
-  @recipe = Recipe.find(params[:recipe_id])
-  @recipe_food = RecipeFood.find(params[:id])
-
-  if @recipe_food.destroy
-      flash[:notice] = 'Ingredient deleted successfully'
-  else
-      flash[:alert] = 'Ingredient failed to delete'
   end
 
-  redirect_to recipe_path(@recipe)
-end
+  def destroy
+    @recipe = Recipe.find(params[:recipe_id])
+    @recipe_food = RecipeFood.find(params[:id])
+
+    if @recipe_food.destroy
+      flash[:notice] = 'Ingredient deleted successfully'
+    else
+      flash[:alert] = 'Ingredient failed to delete'
+    end
+
+    redirect_to recipe_path(@recipe)
+  end
 
 
 
