@@ -5,9 +5,11 @@ class ShoppingListsController < ApplicationController
     @user = current_user
     @recipes = @user.recipes
     @general_food_list = @user.foods
-    @missing_food_items = calculate_missing_food_items(@recipes, general_food_list)
+    @missing_food_items = calculate_missing_food_items(@recipes, @general_food_list)
     @total_missing_items = @missing_food_items.values.sum
     @total_missing_price = calculate_total_missing_price(@missing_food_items)
+
+    @general_shopping_list = generate_general_shopping_list(@missing_food_items, @general_food_list)
   end
 
   private
@@ -36,5 +38,22 @@ class ShoppingListsController < ApplicationController
       total_price += food.price * quantity if food
     end
     total_price
+  end
+
+  def generate_general_shopping_list(missing_food_items, general_food_list)
+    general_shopping_list = []
+
+    missing_food_items.each do |food_name, quantity|
+      food = general_food_list.find_by(name: food_name)
+      next unless food
+
+      general_shopping_list << {
+        name: food_name,
+        quantity:,
+        price: food.price
+      }
+    end
+
+    general_food_list
   end
 end
