@@ -10,6 +10,8 @@ class ShoppingListsController < ApplicationController
     @total_missing_price = calculate_total_missing_price(@missing_food_items)
 
     @general_shopping_list = generate_general_shopping_list(@missing_food_items, @general_food_list)
+    @total_food_items = @general_shopping_list.sum { |item| item[:quantity] }
+    @total_price = @general_shopping_list.sum { |item| item[:quantity] * item[:price] }
   end
 
   private

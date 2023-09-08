@@ -1,9 +1,8 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-6">
-        <h2>New Food</h2>
-      <%= form_with model: @food, local: true, html: { class: 'form-group' } do |form| %>
-
+      <h2>Add Ingredient to Recipe</h2>
+      <%= form_with(model: [@recipe, @recipe_food], local: true, html: { class: 'form-group' }) do |form| %>
         <div class="mb-3">
           <%= form.label :name, class: 'form-label' %>
           <%= form.text_field :name, class: 'form-control' %>
@@ -24,8 +23,7 @@
           <%= form.number_field :quantity, step: 0.01, class: 'form-control' %>
         </div>
 
-        <%= form.submit 'Create Food', class: 'btn btn-primary' %>
-
+        <%= form.submit 'Add Ingredient to Recipe', class: 'btn btn-primary' %>
       <% end %>
     </div>
   </div>
