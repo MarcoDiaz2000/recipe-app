@@ -39,7 +39,6 @@ RSpec.feature 'FoodsIndex', type: :feature do
   end
 end
 
-
 RSpec.feature 'FoodsIndex', type: :feature do
   let(:user) { User.create!(email: 'test@example.com', name: 'Marco', password: 'password') }
 
