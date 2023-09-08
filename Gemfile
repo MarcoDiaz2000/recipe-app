@@ -53,8 +53,8 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails'
-  gem 'minitest', '5.20.0'
-  gem 'racc', '1.7.1'
+  gem 'minitest', '~> 5.20'
+  gem 'racc', '~> 1.7'
   gem 'rails-controller-testing'
   gem 'rspec-rails'
 end
