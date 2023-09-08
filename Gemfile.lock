@@ -311,10 +311,10 @@ DEPENDENCIES
   factory_bot_rails
   importmap-rails
   jbuilder
-  minitest (= 5.20.0)
+  minitest (~> 5.20)
   pg (~> 1.1)
   puma (~> 5.0)
-  racc (= 1.7.1)
+  racc (~> 1.7)
   rails (~> 7.0.7, >= 7.0.7.2)
   rails-controller-testing
   rspec-rails
