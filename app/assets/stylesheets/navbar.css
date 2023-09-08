@@ -1,0 +1,49 @@
+.custom-navbar {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  height: 80px;
+}
+
+.navbar-menu {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.navbar-nav.ml-auto {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin: 0 15px;
+  font-size: large;
+}
+
+.nav-link {
+  color: #000 !important;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.nav-link:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.inline-form {
+  display: inline;
+}
+
+.button-container {
+  display: flex;
+}

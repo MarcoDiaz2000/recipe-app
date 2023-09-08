@@ -1,0 +1,6 @@
+<%= form_with(model: [@recipe, @recipe_food], local: true) do |form| %>
+    <%= form.label :quantity %>
+    <%= form.number_field :quantity %>
+    
+    <%= form.submit 'Update' %>
+<% end %>
