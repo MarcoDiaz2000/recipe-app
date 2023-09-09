@@ -82,5 +82,3 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'devise'
 
 gem 'bootstrap', '~> 4.5.0'
-
-gem 'pg'
